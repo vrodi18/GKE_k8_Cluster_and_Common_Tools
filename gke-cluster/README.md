@@ -14,20 +14,16 @@ To be able to use following terraform module please follow the documentation.
 
 Your `main.tf` should look like this
 ```
-module "gke_cluster" {
-    source  = "fuchicorp/gke/google"
-    cluster_name = "fuchicorp-cluster"
-    google_region = "us-central1"
-    google_project_id = "fsadykov-project"
-    cluster_node_count = "2"
-    cluster_version = "1.15"
-    google_credentials = "./fuchicorp-service-account.json" # service account 
-    image_type        = "COS"
-    disk_size_in_gb   = "10"
-    labels            = {
-        "label" = "fuchicorp-project"
-    }
-}
+google_project_id        = "oval-turbine-304720"
+google_domain_name       = "vladlen-aws.com"
+cluster_version          = "1.15"
+google_bucket_name       = "vladlen-gke-2021"
+deployment_environment   = "dev"
+google_credentials_json  = "service-account.json"
+deployment_name          = "deployment-name"
+google_region            = "us-central1-a"
+cluster_name             = "cluster-1"
+cluster_node_count       = 2
 ```
 
 After you finish with defining all required variables go ahead and run `terraform init`
