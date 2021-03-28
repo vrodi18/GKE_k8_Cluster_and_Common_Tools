@@ -7,6 +7,7 @@ To be able to use following terraform module please follow the documentation.
 
 * Terraform >= 0.11.14
 * provider.google: version = "~> 2.20"
+* Create Service account with necessary permissions on GCP and download Json file
 
 
 
